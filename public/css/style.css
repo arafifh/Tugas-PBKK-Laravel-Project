@@ -1,0 +1,119 @@
+/* style.css */
+
+/* Reset margin dan padding pada elemen-elemen HTML */
+html, body, h1, h2, h3, p, ul, li, form, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur font dan warna latar belakang */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    align-items: center;
+}
+
+/* Mengatur tampilan form */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mengatur tampilan judul */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a.centered-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px; /* Mengatur jarak dari atas */
+}
+
+/* Mengatur tampilan label dan input */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Mengatur tampilan pesan kesalahan */
+.error {
+    color: red;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/* Mengatur tampilan tombol submit */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Mengatur tampilan tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Mengatur tampilan tautan aksi */
+td a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+td a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.action-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan */
+    margin-right: 5px; /* Mengatur jarak antara tombol "Edit" dan "Delete" */
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
