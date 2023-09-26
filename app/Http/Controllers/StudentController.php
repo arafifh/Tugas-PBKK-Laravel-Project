@@ -17,6 +17,7 @@ class StudentController extends Controller
             'email' => 'required|email|unique:students',
             'nrp' => 'required|string',
             'department' => 'required|string',
+            'ipk' => 'required',
             'photo' => 'required|image|mimes:jpeg,png,jpg|max:2048', // Max 2 MB
         ]);
     
@@ -26,7 +27,8 @@ class StudentController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'nrp' => $request->nrp,
-            'department' => $request->department,
+             'department' => $request->department,
+            'ipk' => $request->ipk,
             'photo' => $photoPath,
         ]);
     
@@ -45,7 +47,6 @@ class StudentController extends Controller
         return view('edit', compact('student'));
     }
 
-    // Method untuk mengupdate data mahasiswa berdasarkan ID
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -53,6 +54,7 @@ class StudentController extends Controller
             'email' => 'required|email|unique:students,email,' . $id,
             'nrp' => 'required|string',
             'department' => 'required|string',
+            'ipk' => 'required',
         ]);
 
         $student = Student::findOrFail($id);
@@ -61,12 +63,12 @@ class StudentController extends Controller
             'email' => $request->email,
             'nrp' => $request->nrp,
             'department' => $request->department,
+            'ipk' => $request->ipk,
         ]);
 
         return redirect()->route('data')->with('success', 'Data mahasiswa berhasil diperbarui.');
     }
 
-    // Method untuk menghapus data mahasiswa berdasarkan ID
     public function destroy($id)
     {
         $student = Student::findOrFail($id);

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('nrp');
             $table->string('department');
+            $table->float('ipk');
             $table->binary('photo');
             $table->timestamps();
         });
@@ -30,3 +31,5 @@ return new class extends Migration
         Schema::dropIfExists('students');
     }
 };
+
+// php artisan migrate

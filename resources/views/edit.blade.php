@@ -29,9 +29,12 @@
 
         <label for="department">Department:</label>
         <input type="text" name="department" id="department" value="{{ $student->department }}" required>
+       
+        <label for="ipk">IPK:</label>
+        <input type="text" name="ipk" id="ipk" value="{{ $student->ipk }}" required>
 
         <button type="submit">Update</button>
     </form>
-    <a href="{{ route('data') }}">Kembali ke Data Mahasiswa</a>
+    <a href="{{ route('data') }}">Back to data</a>
 </body>
 </html>

@@ -32,6 +32,12 @@
             <div class="error">{{ $message }}</div>
         @enderror
 
+        <label for="ipk">IPK:</label>
+        <input type="text" name="ipk" id="ipk" required>
+        @error('ipk')
+            <div class="error">{{ $message }}</div>
+        @enderror
+
         <label for="photo">Photo:</label>
         <input type="file" name="photo" id="photo" required>
         @error('photo')
